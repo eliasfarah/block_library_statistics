@@ -1,0 +1,22 @@
+1- Copiar o arquivo da raiz chamado record_viewed.php no diretório /mod/data/classes/event
+
+2- Adicionar Código abaixo na linha 1594 após elese do notapproved
+
+if (($_REQUEST['rid'] != '') || ($_REQUEST['mode'] != '')) {            
+    // Trigger an event for record viewed.
+    $event = \mod_data\event\record_viewed::create(array(
+        'objectid' => $data->id,
+        'context' => context_module::instance($cm->id),
+        'courseid' => $courseid,
+        'other' => array(
+            'dataid' => $data->id,
+            'recordid' => $record->id
+        )
+    ));
+    $event->add_record_snapshot('data_records', $deleterecord);
+    $event->trigger();
+}
+
+3- Instalar plugin.
+
+4- Adicionar bloco na região correta.
