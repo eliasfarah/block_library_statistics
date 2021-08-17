@@ -1,7 +1,45 @@
-body.page-mod-data-view .ccnMdlHeading {
-    display: none;
+.block_library_statistics {
+    margin-bottom: 3rem;
 }
 
-h4.title {
-    font-size: 30px;
+.block_library_statistics .statistics>div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    max-height: 160px;
+}
+
+.block_library_statistics .statistics>div span:first-of-type {
+    flex: 0 0 100%;
+    line-height: 1.2rem;
+}
+
+.block_library_statistics .statistics>div span:last-of-type {
+    flex: 0 0 100%;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+}
+
+.block_library_statistics h4.title {
+    font-size: 2rem;
+}
+
+.block_library_statistics .categories ul {
+    padding: 1rem 0;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.block_library_statistics .categories ul li {
+    margin: .5rem 0;
+}
+
+
+/* --- hiding the activity name when using Edumy theme */
+
+body.page-mod-data-view .ccnMdlHeading {
+    display: none;
 }
