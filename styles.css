@@ -1,5 +1,22 @@
+/* --- the block */
+
 .block_library_statistics {
     margin-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+
+/* --- the statistics */
+
+.block_library_statistics .statistics {
+    flex: 0 0 75%;
+    max-width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem 2rem;
 }
 
 .block_library_statistics .statistics>div {
@@ -9,6 +26,12 @@
     justify-items: center;
     justify-content: center;
     max-height: 160px;
+    background: #efefef;
+    background: #efefef;
+    min-width: 100%;
+    padding: 1.5rem;
+    border-radius: 14px;
+    text-align: center;
 }
 
 .block_library_statistics .statistics>div span:first-of-type {
@@ -25,6 +48,19 @@
 
 .block_library_statistics h4.title {
     font-size: 2rem;
+}
+
+
+/* --- categories */
+
+.block_library_statistics .categories {
+    flex: 0 0 22%;
+    max-width: 22%;
+}
+
+.block_library_statistics .categories>span {
+    font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
 .block_library_statistics .categories ul {
